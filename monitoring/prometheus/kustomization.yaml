@@ -4,8 +4,8 @@ kind: Kustomization
 resources:
 # bundle is large and `kubectl apply` gets error, so use `kubectl create`
 # - bundle-v0.65.2.yaml # wget https://github.com/prometheus-operator/prometheus-operator/releases/download/v0.65.2/bundle.yaml 
+- bundle-prometheus-operator-v0.65.2.yaml
 - rbac.yaml
 - prometheus.yaml
 - virtual-service.yaml
 - service-monitor.yaml
-

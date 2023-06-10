@@ -5,11 +5,8 @@ metadata:
 spec:
   serviceAccountName: prometheus
   serviceMonitorNamespaceSelector: {}
-    # matchLabels:
-    #   name: application
   serviceMonitorSelector: {}
   podMonitorSelector: {}
   resources:
     requests:
       memory: 400Mi
-
