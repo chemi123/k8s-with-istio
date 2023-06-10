@@ -4,4 +4,3 @@ metadata:
   name: application
   labels:
     istio-injection: enabled
-
