@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-exporter-deployment
+  namespace: application
+  labels:
+    app: node-exporter
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-exporter
+  template:
+    metadata:
+      labels:
+        app: node-exporter
+    spec:
+      containers:
+      - name: node-exporter
+        image: prom/node-exporter:latest
+        ports:
+        - containerPort: 9100
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-exporter-service
+  namespace: application
+  labels:
+    operated-prometheus: "true"
+spec:
+  selector:
+    app: node-exporter
+  ports:
+    - protocol: TCP
+      name: web
+      port: 9100
+      targetPort: 9100
+

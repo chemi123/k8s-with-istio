@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: kiali-service
+  namespace: istio-system
+spec:
+  hosts:
+  - "kiali.chemimotty.com"
+  gateways:
+  - istio-system/my-gateway # my-gatewayと同じnamespaceに所属しているのでnamespaceの指定は不要ではある
+  http:
+  - route:
+    - destination:
+        host: kiali
+        port:
+          number: 20001
+

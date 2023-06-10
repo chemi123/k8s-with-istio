@@ -1,0 +1,8 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  name: example-istiocontrolplane
+  namespace: istio-system
+spec:
+  profile: default
+

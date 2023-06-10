@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: node-exporter-virtual-service 
+  namespace: application
+spec:
+  hosts:
+  - "node-exporter.chemimotty.com"
+  gateways:
+  - istio-system/my-gateway
+  http:
+  - route:
+    - destination:
+        host: node-exporter-service
+        port:
+          number: 9100
+
