@@ -11,4 +11,3 @@ resources:
 - prometheus.yaml
 - virtual-service.yaml
 - istio-monitor.yaml
-

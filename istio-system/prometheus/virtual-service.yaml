@@ -13,4 +13,3 @@ spec:
         host: prometheus-operated
         port:
           number: 9090
-
