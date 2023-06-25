@@ -13,13 +13,13 @@ spec:
       protocol: HTTP
     hosts:
     - "*.chemimotty.com"
-  - port:
-      number: 443
-      name: chemimotty-https
-      protocol: HTTPS
-    hosts:
-    - "*.chemimotty.com"
-    tls:
-      mode: SIMPLE
-      credentialName: chemimotty-tls
+  # - port:
+  #     number: 443
+  #     name: chemimotty-https
+  #     protocol: HTTPS
+  #   hosts:
+  #   - "*.chemimotty.com"
+  #   tls:
+  #     mode: SIMPLE
+  #     credentialName: chemimotty-tls
 
