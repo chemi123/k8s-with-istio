@@ -6,7 +6,7 @@ spec:
   hosts:
   - "prometheus.chemimotty.com"
   gateways:
-  - istio-system/my-gateway
+  - istio-system/gateway
   http:
   - route:
     - destination:
