@@ -8,4 +8,3 @@ istioctl install -f istio-operator.yaml -y
 kubectl label namespace default istio-injection=enabled
 
 kustomize build | kubectl apply -f -
-

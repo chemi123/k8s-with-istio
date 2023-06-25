@@ -22,4 +22,3 @@ spec:
   #   tls:
   #     mode: SIMPLE
   #     credentialName: chemimotty-tls
-
