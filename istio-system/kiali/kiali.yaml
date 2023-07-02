@@ -5,9 +5,9 @@ metadata:
 spec:
   istio_namespace: istio-system
   deployment:
-    namespace: istio-system
+    namespace: monitoring
   auth:
     strategy: anonymous
   external_services:
     prometheus:
-      url: http://prometheus-operated.istio-system.svc.cluster.local:9090
+      url: http://prometheus-k8s.monitoring.svc.cluster.local:9090

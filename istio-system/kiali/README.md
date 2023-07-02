@@ -5,7 +5,7 @@ https://kiali.io/docs/installation/installation-guide/
 ```
 # operator only installation
 helm install \
-    --namespace istio-system \
+    --namespace monitoring \
     kiali-operator \
     kiali/kiali-operator
 
