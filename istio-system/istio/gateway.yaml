@@ -13,12 +13,16 @@ spec:
       protocol: HTTP
     hosts:
     - "*.chemimotty.com"
-  # - port:
-  #     number: 443
-  #     name: chemimotty-https
-  #     protocol: HTTPS
-  #   hosts:
-  #   - "*.chemimotty.com"
-  #   tls:
-  #     mode: SIMPLE
-  #     credentialName: chemimotty-tls
+  - port:
+      number: 443
+      name: chemimotty-https
+      protocol: HTTPS
+    hosts:
+    - "nginx.chemimotty.com"
+    - "prometheus.chemimotty.com"
+    - "grafana.chemimotty.com"
+    - "jaeger.chemimotty.com"
+    - "kiali.chemimotty.com"
+    tls:
+      mode: SIMPLE
+      credentialName: istio-system-cert-tls
