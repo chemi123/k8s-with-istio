@@ -8,6 +8,6 @@ spec:
   meshConfig:
     defaultConfig:
       tracing:
-        sampling: 100.0 # 100% sampling rate
+        sampling: 10.0 # 10% sampling rate
         zipkin:
           address: all-in-one-jaeger-collector.monitoring.svc.cluster.local:9411
