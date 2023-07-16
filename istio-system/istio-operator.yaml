@@ -5,3 +5,9 @@ metadata:
   namespace: istio-system
 spec:
   profile: default
+  meshConfig:
+    defaultConfig:
+      tracing:
+        sampling: 100.0 # 100% sampling rate
+        zipkin:
+          address: all-in-one-jaeger-collector.monitoring.svc.cluster.local:9411
