@@ -11,3 +11,8 @@ spec:
   external_services:
     prometheus:
       url: http://prometheus-k8s.monitoring.svc.cluster.local:9090
+    tracing:
+      enabled: true
+      in_cluster_url: 'http://all-in-one-jaeger-query.monitoring.svc.cluster.local:16685'
+      use_grpc: true
+      url: 'https://jaeger.chemimotty.com'
